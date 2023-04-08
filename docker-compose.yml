@@ -25,7 +25,8 @@ services:
       - auth
       - server
   mongodb:
-    image: mongo:latest
+    # image: mongo:latest
+    image: mongo:4.4.19
     ports:
       - 8282:27017
     volumes:
