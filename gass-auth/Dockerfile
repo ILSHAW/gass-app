@@ -4,7 +4,7 @@ ENV TZ Europe/Moscow
 
 WORKDIR /usr/src/app/
 
-COPY *.json .
+COPY *.json ./
 
 RUN yarn install
 
