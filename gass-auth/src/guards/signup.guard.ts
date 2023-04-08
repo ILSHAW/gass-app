@@ -6,6 +6,12 @@ import { Request } from "express"
 import { ExceptionService } from "@/services/exception.service"
 
 class SignupDTO {
+    @IsString({ message: "Name must be a string" })
+    @IsNotEmpty({ message: "Name is required" })
+    name: string
+    @IsString({ message: "Surname must be a string" })
+    @IsNotEmpty({ message: "Surname is required" })
+    surname: string
     @IsEmail({}, { message: "Login must be a valid email" })
     @IsString({ message: "Login must be a string" })
     @IsNotEmpty({ message: "Login is required" })
@@ -15,6 +21,8 @@ class SignupDTO {
     password: string
 
     constructor(data: SignupDTO) {
+        this.name = data.name
+        this.surname = data.surname
         this.login = data.login
         this.password = data.password
     }
