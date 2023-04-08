@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/*":["src/*"],
+      "@configs/*":["src/configs/*"],
+      "@controllers/*":["src/controllers/*"],
+      "@decorators/*":["src/decorators/*"],
+      "@exceptions/*":["src/exceptions/*"],
+      "@filters/*":["src/filters/*"],
+      "@guards/*":["src/guards/*"],
+      "@middlewares/*":["src/middlewares/*"],
+      "@models/*":["src/models/*"],
+      "@modules/*":["src/modules/*"],
+      "@pipes/*":["src/pipes/*"],
+      "@schemas/*":["src/schemas/*"],
+      "@services/*":["src/services/*"],
+      "@strategies/*":["src/strategies/*"]
+    }
+  }
+}
