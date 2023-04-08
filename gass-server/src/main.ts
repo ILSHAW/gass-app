@@ -17,7 +17,7 @@ async function bootstrap() {
 	const options = new DocumentBuilder().setTitle("Server API").setVersion("1.0.0").addCookieAuth("access").build()
 	const document = SwaggerModule.createDocument(app, options)
 
-	SwaggerModule.setup("api", app, document)
+	SwaggerModule.setup("swagger", app, document)
 
 	app.useGlobalFilters(new EverythingExceptionFilter(), new HttpExceptionsFilter(), new NotFoundExceptionFilter())
 	app.useGlobalPipes(new ValidationPipe())
