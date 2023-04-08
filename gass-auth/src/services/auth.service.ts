@@ -10,6 +10,10 @@ import { RsaService } from "@services/rsa.service"
 import { IUserModel } from "@/models/user.model"
 
 export class SignupBodyDTO {
+    @ApiProperty({ description: "User name", type: String, example: "Andrey" })
+    name: string
+    @ApiProperty({ description: "User Surname", type: String, example: "Neyzhmak" })
+    surname: string
     @ApiProperty({ description: "User email", type: String, example: "pe4enka519@gmail.com" })
     login: string
     @ApiProperty({ description: "User password", type: String, example: "123456" })
@@ -32,6 +36,8 @@ export class AuthService {
 
 	async signup(req: Request, res: Response, body: SignupBodyDTO) {
         const user = await this.userModel.create({
+            name: body.name,
+            surname: body.surname,
             login: body.login,
             password: await argon.hash(body.password)
         })

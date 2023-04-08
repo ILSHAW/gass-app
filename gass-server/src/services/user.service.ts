@@ -10,7 +10,9 @@ export class UserService {
             id: req.user.id,
             login: req.user.login,
             role: req.user.role,
-            verified: req.user.verified
+            verified: req.user.verified,
+            name: req.user.name,
+            surname: req.user.surname
         }})
     }
 }
