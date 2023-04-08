@@ -2,13 +2,13 @@ FROM node:18-alpine
 
 ENV TZ Europe/Moscow
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
 COPY *.json .
 
 RUN yarn install
 
-COPY . .
+COPY ./ ./
 
 RUN yarn build
 
